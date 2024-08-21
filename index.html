@@ -1,34 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rinterio</title>
-     <!-- Daisy UI and Tailwind css cdn -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-     <script src="https://cdn.tailwindcss.com"></script>
-     <script>
-         tailwind.config = {
-             theme: {
-                 extend: {
-                     colors: {
-                         clifford: '#da373d',
-                         'primary_clr': '#FF4240',
-                         'second_clr': '#131318',
-                         'para_clr': '#424247',
-                         'accent': 'rgba(255, 255, 255, 0.6)',
-                     },
-                 },
-             },
-         }
-     </script>
-      <!-- font awesome cdn -->
+    <!-- Daisy UI and Tailwind css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- manrope font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ABEF5F',
+                        'secondary': '#212121',
+                        'body': '#494949',
+                        'accent': '#737373',
+                        'body_neutral': '#F4F4F4',
+                        'footer': '#1C1C1C',
+                    },
+                    fontFamily: {
+                        'manrope': "Manrope",
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body>
-    <header class="w-11/12 mx-auto">
-        <nav>
 
+<body class="font-manrope">
+    <header class="bg-gradient-to-b from-body_neutral to-white h-96">
+        <nav class="w-11/12 mx-auto lg:pt-14 lg:mb-11 pt-8 mb-8">
+            <div class="navbar">
+                <div class="navbar-start space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 bg-primary rounded-full p-2 text-footer h-8 w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+
+                    <a class="lg:text-[32px] text-[28px] font-extrabold text-secondary">Rinterio</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a
+                                class="text-accent hover:bg-transparent hover:text-body hover:font-extrabold duration-300 ease-in-out">Home</a>
+                        </li>
+                        <li><a
+                                class="text-accent hover:bg-transparent hover:text-body hover:font-extrabold duration-300 ease-in-out">Services</a>
+                        </li>
+                        <li><a
+                                class="text-accent hover:bg-transparent hover:text-body hover:font-extrabold duration-300 ease-in-out">Portfolio</a>
+                        </li>
+                        <li><a
+                                class="text-accent hover:bg-transparent hover:text-body hover:font-extrabold duration-300 ease-in-out">Blogs</a>
+                        </li>
+                        <li><a
+                                class="text-accent hover:bg-transparent hover:text-body hover:font-extrabold duration-300 ease-in-out">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex items-center space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 bg-white rounded-full p-2 text-footer h-10 w-10 hidden md:block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 bg-white rounded-full p-2 text-footer h-10 w-10 hidden md:block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+
+                        <a class=" text-xl font-extrabold bg-primary rounded-[32px] px-5 py-3 hidden md:block">Book
+                            Consult <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="ml-2 size-6 bg-footer rounded-full p-2 text-white h-8 w-8 md:inline">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+
+                        </a>
+                    </div>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="lg:hidden">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg"
+                                class=" bg-white rounded-full p-2 text-footer h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="bg-white rounded-full p-3  h-12 w-12 stroke-current text-accent border border-[#E9E9E9]">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow absolute right-0">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -38,4 +127,5 @@
 
     </footer>
 </body>
+
 </html>
